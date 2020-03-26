@@ -26,7 +26,7 @@ module.exports = {
         const [count] = await conexoes('casos').count();
 
         const casos = await conexoes('casos')
-            .join('ongs', 'ong_id', '=', 'casos.ong_id')
+            .join('ongs', 'ongs.id', '=', 'casos.ong_id')
             .limit(5)
             .offset((page-1)*5)
             .select(['casos.*', 
