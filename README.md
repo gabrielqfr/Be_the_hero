@@ -12,4 +12,20 @@ Aplicativo web e mobile desenvolvido para conectar ONGs a pessoas dispostas a aj
 
 ## Tecnologias
 
-Back-end desenvolvido em Nodejs, front-end web e mobile desenvolvidos em React e React Native utilizando Axios para integração com a API.
+#### Back-end
+
+- Nodejs
+- Padrão MVC
+- Testes unitários e de integração com supertest e jest
+- Banco de dados SQLite com utilização de knex para manipulação de dados
+
+#### Front-end web
+
+- React
+- Utilização de Axios para comunicação com a API
+
+#### Front-end mobile
+
+- React Native
+- Expo
+- Utilização de Axios para comunicação com a API

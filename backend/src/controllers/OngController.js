@@ -6,11 +6,14 @@ const crypto = require('crypto');
 /**Conexão com o banco */
 const conexoes = require('../database/conexoes');
 
+/**Criação de Id único: função separada para teste unitário */
+const createUniqueId = require('../utils/generateUniqueId');
+
 module.exports = {
     /**Criar ONG */
     async create( request, response) {
         const { nome, email, whatsapp, cidade, UF } = request.body;
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = createUniqueId();
 
         await conexoes('ongs').insert({
             id,
